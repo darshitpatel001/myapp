@@ -5,12 +5,20 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Home from './Home';
 import Counter from './Counter';
+import Magic from './Magic';
+import Mydata from './Mydata';
+import Card from './Card';
+import Tasks from './Tasks';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <Counter />
-    <Home />
+    {/* <Counter />
+    <Home /> */}
+    {/* <Magic /> */}
+  {/* <Mydata/> */}
+  <Card />
+  <Tasks />
   </React.StrictMode>
 );
 
