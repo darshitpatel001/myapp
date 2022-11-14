@@ -9,6 +9,7 @@ import Magic from './Magic';
 import Mydata from './Mydata';
 import Card from './Card';
 import Tasks from './Tasks';
+import Fatch from './Fatch';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -17,8 +18,9 @@ root.render(
     <Home /> */}
     {/* <Magic /> */}
   {/* <Mydata/> */}
-  <Card />
-  <Tasks />
+  {/* <Card /> */}
+  {/* <Tasks /> */}
+  <Fatch/>
   </React.StrictMode>
 );
 

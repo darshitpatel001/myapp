@@ -15,9 +15,9 @@ export default function Card() {
 
   }
  
-   const next = () =>{
+  const next = () =>{
     // setindex(index -1)
-    if (index >=reviews.length-1) {
+    if (index >=reviews.length-1){
       setindex(0)
     } else {
       setindex(index+1)
