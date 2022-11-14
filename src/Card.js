@@ -23,6 +23,7 @@ export default function Card() {
       setindex(index+1)
     }
   }
+  
   return (
     <div>
        
