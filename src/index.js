@@ -10,6 +10,7 @@ import Mydata from './Mydata';
 import Card from './Card';
 import Tasks from './Tasks';
 import Fatch from './Fatch';
+import Fatchapi from './Fatchapi';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
   {/* <Card /> */}
   {/* <Tasks /> */}
   <Fatch/>
+  {/* <Fatchapi /> */}
   </React.StrictMode>
 );
 
