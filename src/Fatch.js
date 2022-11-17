@@ -3,11 +3,9 @@ import { useEffect } from "react";
 
 export default function Fatch() {
   const [data, setdata] = useState([]);
+  const [first, setfirst] = useState();
 
-  const Handler = (e) => {
-    setdata(e.target.value);
-  };
-
+  
   useEffect(() => {
     fetch("https://fakestoreapi.com/carts")
       .then((y) => y.json())
@@ -15,6 +13,11 @@ export default function Fatch() {
         setdata(y);
       });
   }, []);
+
+  const Handler = (e) => {
+    setfirst(e.target.value);
+  };
+
 
   // const Assending = () => {
   //   data.sort()
@@ -38,14 +41,14 @@ export default function Fatch() {
 
   return (
     <div>
-      <input type="text" onChange={Handler} />
+      <input type="text" onChange={Handler} value={first}/>
       <table>
         {data.filter((value, index) => {
-            return value.id.indexOf(data) >= 0;})
+            return (value.id.indexOf(first) >= 0);})
           .map((element) => {
             return (
               <tr>
-                {" "}
+                
                 <td> {element.id}</td>
                 <td> {element.userId}</td> <td> {element.date}</td>
               </tr>
