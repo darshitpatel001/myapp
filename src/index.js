@@ -11,6 +11,10 @@ import Card from './Card';
 import Tasks from './Tasks';
 import Fatch from './Fatch';
 import Fatchapi from './Fatchapi';
+import Axioss from './Test';
+import Test from './Test';
+import Emploayee from './Emploayee';
+import Form from './Form';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,8 +25,11 @@ root.render(
   {/* <Mydata/> */}
   {/* <Card /> */}
   {/* <Tasks /> */}
-  <Fatch/>
+  {/* <Fatch/> */}
+  {/* <Test/> */}
   {/* <Fatchapi /> */}
+  {/* <Emploayee/> */}
+  <Form/>
   </React.StrictMode>
 );
 

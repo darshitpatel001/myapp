@@ -1,0 +1,11 @@
+.bigblue {
+    color: DodgerBlue;
+    padding: 40px;
+    font-family: Sans-Serif;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  .btn {
+    padding: 5px;
+  }

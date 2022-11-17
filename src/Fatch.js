@@ -3,11 +3,11 @@ import { useEffect } from "react";
 
 export default function Fatch() {
   const [data, setdata] = useState([]);
-  const [first, setfirst] = useState();
+  const [first, setfirst] = useState("");
 
   
   useEffect(() => {
-    fetch("https://fakestoreapi.com/carts")
+    fetch("https://jsonplaceholder.typicode.com/users")
       .then((y) => y.json())
       .then((y) => {
         setdata(y);
@@ -19,44 +19,45 @@ export default function Fatch() {
   };
 
 
-  // const Assending = () => {
-  //   data.sort()
-  // }
-
-  // const Desending = () => {
-  //   let mydata1 = [...data];
-  //   mydata1 = data.sort(function(a,b) {
-
-  //     if(a.id > b.id)
-  //     return -1
-  //     else
-  //     return 1;
-
-  //   })
-
-  //   console.log(mydata1);
-  //   fachData(mydata1)
-  //   console.log(data);
-  // }
+  const Assending = () => {
+    let mydata1 = [...data];
+    mydata1.sort(function(a,b) {
+        if(a.id > b.id)
+        return 1;
+        else
+        return -1;   
+      })
+      setdata(mydata1)
+}
+const Desending = () => {
+    let mydata1 = [...data]; 
+    mydata1.sort(function(a,b) {
+        if(a.id > b.id)
+        return -1
+        else
+        return 1;
+      })       
+      setdata(mydata1)
+}
 
   return (
     <div>
       <input type="text" onChange={Handler} value={first}/>
       <table>
         {data.filter((value, index) => {
-            return (value.id.indexOf(first) >= 0);})
+            return (value.email.toUpperCase().indexOf(first.toUpperCase()) >= 0);})
           .map((element) => {
             return (
               <tr>
                 
                 <td> {element.id}</td>
-                <td> {element.userId}</td> <td> {element.date}</td>
+                <td> {element.name}</td> <td> {element.email}</td>
               </tr>
             );
           })}
       </table>
-      {/* <button onClick={Assending}>Assending</button>
-          <button onClick={Desending}>Desending</button> */}
+      <button onClick={Assending}>Assending</button>
+          <button onClick={Desending}>Desending</button>
     </div>
   );
 }
