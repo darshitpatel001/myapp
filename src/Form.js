@@ -19,16 +19,20 @@ export default function Form() {
     if (e.target.name == "hobbies") {
       let data = form.hobbies;
       if (e.target.checked) {
+        
         data.push(e.target.value);
-
         setForm({ ...form, hobbies: data });
-      } else {
+
+      } 
+      else {
         let Data1 = data.filter((value) => {
           return value != e.target.value;
         });
+
         setForm({ ...form, hobbies: Data1 });
       }
-    } else {
+    } 
+    else {
       setForm({ ...form, [e.target.name]: e.target.value });
     }
   };
