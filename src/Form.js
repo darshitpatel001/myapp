@@ -112,20 +112,10 @@ export default function Form() {
         <input type="checkbox" name="hobbies" value="music" onClick={Handler} />
 
         <label> Reading </label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          value="Reading"
-          onClick={Handler}
-        />
+        <input type="checkbox" name="hobbies" value="Reading" onClick={Handler}/>
 
         <label> Cricket </label>
-        <input
-          type="checkbox"
-          name="hobbies"
-          value="Cricket"
-          onClick={Handler}
-        />
+        <input type="checkbox" name="hobbies" value="Cricket" onClick={Handler}/>
         <br />
 
         <input className="submit" type="submit" value="Submit" />
