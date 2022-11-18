@@ -14,6 +14,17 @@ export default function Form() {
     hobbies: [],
   });
 
+  const [validation,setvalidation]= useState({
+    firstname: "",
+    middalename: "",
+    lastname: "",
+    mobileNumber: "",
+    password: "",
+    cityname: "",
+    
+    
+  })
+
   const Handler = (e) => {
     // setForm({...form ,[e.target.name]:[e.target.value]})
     if (e.target.name == "hobbies") {
@@ -33,6 +44,21 @@ export default function Form() {
       }
     } 
     else {
+
+      if (e.target.value =="") {
+        setvalidation({...validation, [e.target.name]:`${e.target.name} is required `})
+      }
+      else {
+       setvalidation({ ...validation,[e.target.value]:""})
+      }
+
+      if (/^[A-Za-z]+$/.test(e.target.value)== false && e.target.name == "firstname"){
+        setvalidation({...validation, firstname : "first name is invalid"})
+
+      }
+
+    
+
       setForm({ ...form, [e.target.name]: e.target.value });
     }
   };
@@ -75,33 +101,39 @@ export default function Form() {
       <form onSubmit={DataSubmit} class="registartion-form">
         
 <table>
-  
         <label for="">First Name : </label>
        <input type="text" name="firstname" onChange={Handler} />
+        <span>{validation.firstname}</span>
         <br/>
-
+    
         <label for="">Middale : </label>
         <input type="text" name="middalename" onChange={Handler} />
+        <span>{validation.middalename}</span>
         <br />
 
         <label for="">Last Name : </label>
         <input type="text" name="lastname" onChange={Handler} />
+        <span>{validation.lastname}</span>
         <br />
 
         <label for="">Mobile Number: </label>
         <input type="text" name="mobileNumber" onChange={Handler} />
+        <span>{validation.mobileNumber}</span>
         <br />
 
         <label for="">Email : </label>
         <input type="text" name="email" onChange={Handler} />
+        <span>{validation.email}</span>
         <br />
 
         <label for="">Password : </label>
         <input type="password" name="password" onChange={Handler} />
+        <span>{validation.password}</span>
         <br />
 
         <label for="">City Name  : </label>
         <input type="text" name="cityname" onChange={Handler} />
+        <span>{validation.cityname}</span>
         <br />
 
         <label>Gender : Male </label>
