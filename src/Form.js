@@ -66,34 +66,38 @@ export default function Form() {
   };
 
   return (
-    <div>
-      <form onSubmit={DataSubmit} className="bigblue">
-        <h3>Student Form</h3>
-        <label for="">First Name :</label>
-        <input type="text" name="firstname" onChange={Handler} />
+    <div class="container">
+      <h3>Student Form</h3>
+      <form onSubmit={DataSubmit} class="registartion-form">
+        
+<table>
+  
+        <label for="">First Name : </label>
+       <input type="text" name="firstname" onChange={Handler} />
+      
         <br />
 
-        <label for="">Middale :</label>
+        <label for="">Middale : </label>
         <input type="text" name="middalename" onChange={Handler} />
         <br />
 
-        <label for="">Last Name :</label>
+        <label for="">Last Name : </label>
         <input type="text" name="lastname" onChange={Handler} />
         <br />
 
-        <label for="">Mobile Number:</label>
+        <label for="">Mobile Number: </label>
         <input type="text" name="mobileNumber" onChange={Handler} />
         <br />
 
-        <label for="">Email :</label>
+        <label for="">Email : </label>
         <input type="text" name="email" onChange={Handler} />
         <br />
 
-        <label for="">Password :</label>
+        <label for="">Password : </label>
         <input type="password" name="password" onChange={Handler} />
         <br />
 
-        <label for="">City Name :</label>
+        <label for="">City Name  : </label>
         <input type="text" name="cityname" onChange={Handler} />
         <br />
 
@@ -124,7 +128,8 @@ export default function Form() {
         />
         <br />
 
-        <input className="btn" type="submit" value="Submit" />
+        <input className="submit" type="submit" value="Submit" />
+        </table>
       </form>
     </div>
   );
