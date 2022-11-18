@@ -74,8 +74,7 @@ export default function Form() {
   
         <label for="">First Name : </label>
        <input type="text" name="firstname" onChange={Handler} />
-      
-        <br />
+        <br/>
 
         <label for="">Middale : </label>
         <input type="text" name="middalename" onChange={Handler} />
