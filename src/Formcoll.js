@@ -65,7 +65,7 @@ export default function Formcoll() {
               options = {Collage}
             />
             
-            <label>Date:</label>
+            <label>Date : </label>
             <input type="date" id="birthday" name="birthday"/>
             <input type="date" id="birthday" name="birthday"/> <br/>
 
