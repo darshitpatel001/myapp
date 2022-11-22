@@ -17,10 +17,15 @@ export default function Formdegree() {
       ];
       const countryData = [
         { value: 'MSU', label: 'MSU' },
-        { value: 'anand', label: 'anand' },
-        { value: 'rajkot', label: 'rajkot' },
-        { value: 'vvnagar', label: 'vvnagar' },
+        { value: 'PARUL', label: 'PARUL' },
+        { value: 'DHARUKA', label: 'DHARUKA' },
+        { value: 'RK', label: 'RK' },
       ];
+
+      const handler =(e)=> {
+        console.log(e);
+        setData({...data,[e.target.name] : e.target.value})
+      }
   return (
     <div>
 
