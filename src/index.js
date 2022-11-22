@@ -16,6 +16,7 @@ import Test from './Test';
 import Emploayee from './Emploayee';
 import Form from './Form';
 import Formdegree from './Formdegree';
+import Formcoll from './Formcoll';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -31,7 +32,8 @@ root.render(
   {/* <Fatchapi /> */}
   {/* <Emploayee/> */}
   {/* <Form/> */}
-  <Formdegree/>
+  {/* <Formdegree/> */}
+  <Formcoll />
   </React.StrictMode>
 );
 
