@@ -66,14 +66,14 @@ export default function Formcoll() {
             />
             
             <label>Date : </label>
-            <input type="date" id="birthday" name="birthday"/>
+            <input type="date" id="birthday" name="birthday"/>  
             <input type="date" id="birthday" name="birthday"/> <br/>
 
             <input type="checkbox" name='hobbies'/>
-            <label>I am already study </label>
+            <label>already Running </label>
 
             <input type="checkbox" name='hobbies'/>
-            <label> I am pass out</label>
+            <label>Pass out</label><br/>
 
             <input type="submit" value="Submit"/>
     </form>
