@@ -15,6 +15,7 @@ import Axioss from './Test';
 import Test from './Test';
 import Emploayee from './Emploayee';
 import Form from './Form';
+import Formdegree from './Formdegree';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -29,7 +30,8 @@ root.render(
   {/* <Test/> */}
   {/* <Fatchapi /> */}
   {/* <Emploayee/> */}
-  <Form/>
+  {/* <Form/> */}
+  <Formdegree/>
   </React.StrictMode>
 );
 
