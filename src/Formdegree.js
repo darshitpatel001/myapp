@@ -15,20 +15,43 @@ export default function Formdegree() {
         { value: 'LLB', label: 'LLB' },
         { value: 'IIT', label: 'IIT' },
       ];
-      const countryData = [
+      const Collage = [
         { value: 'MSU', label: 'MSU' },
         { value: 'PARUL', label: 'PARUL' },
         { value: 'DHARUKA', label: 'DHARUKA' },
         { value: 'RK', label: 'RK' },
       ];
 
-      const handler =(e)=> {
+      const Handler =(e)=> {
         console.log(e);
         setData({...data,[e.target.name] : e.target.value})
       }
+
+      const handleSubmit = (e)=> {
+        e.preventDefault();
+        console.log(data);
+      }
+
   return (
     <div>
-
+  <form onSubmit={handleSubmit}>
+        <input type="Text" name='name' onChange={Handler}/>
+      
+        <Select
+               options={Collage}
+        onChange={(e)=> {
+            handler({target:{name : 'collage', value: e.value}}) }}
+        name='collage'
+      />
+        <Select
+        options={Degree}
+       onChange={(e)=> {
+        handler({target:{name : 'Degree', value: e.value}}) }}
+        name='Degree'
+       
+      />
+      <input type="submit" value="Submit"/>
+      </form>
     </div>
   )
 }
